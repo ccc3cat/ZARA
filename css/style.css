@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "Noto Sans TC", "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    ;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.carousel-item {
+    height: calc(100vh - 75px);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 75px;
+}
+
+.navbar-brand {
+    width: 100px;
+}
+
+.navbar .btn {
+    width: 5rem;
+}
+
+/* 最新商品 */
+
+.title {
+
+    border-left: 5px solid #555;
+    margin: 30px 0 20px;
+    padding: 1rem;
+}
+
+.title span {
+    margin-left: .5rem;
+    font-size: 1.2rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 12.5rem;
+    width: calc(100% - 12.5rem);
+    bottom: 5px;
+    height: 3px;
+    background-color: #222;
+}
+
+.mask {
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    position: relative;
+}
+
+.mask-1 {
+    mask-image: url(../images/news-mask1.svg);
+}
+
+.mask-2 {
+    mask-image: url(../images/news-mask2.svg);
+}
+
+.mask-3 {
+    mask-image: url(../images/news-mask3.svg);
+}
+
+#new .col,#hot .col{
+    position: relative;
+}
+
+#new h1,#hot h1 {
+    position: absolute;
+    z-index: 999;
+    width: 93%;
+    height: 100%;
+    
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+transition: .45s;
+}
+#new h1:hover ,#hot h1:hover{
+    opacity: 1;
+
+}
+
+
+#hot .col{
+    clip-path: circle(45%);
+}
